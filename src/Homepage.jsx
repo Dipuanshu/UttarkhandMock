@@ -1,6 +1,5 @@
 /** @format */
 
-import React from "react";
 import CourseSlider from "./CourseSlider";
 import Header from "./Header";
 import Footer from "./Footer";
