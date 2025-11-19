@@ -14,7 +14,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2 cursor-pointer">
           <img
-            src="\public\LogoUttakhandMock.jpg"
+            src="/LogoUttakhandMock.jpg"
             alt="logo"
             className="h-10 w-10 rounded-full"
           />

@@ -82,7 +82,7 @@ const Homepage = () => {
         <div className="bg-pink-100 py-10 px-6">
           <div className="max-w-6xl mx-auto flex items-start gap-6">
             <img
-              src="\public\LogoUttakhandMock.jpg"
+              src="/LogoUttakhandMock.jpg"
               alt="Logo"
               className="w-28 h-28 rounded-lg object-cover"
             />
