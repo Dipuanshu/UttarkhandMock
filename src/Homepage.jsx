@@ -3,7 +3,7 @@
 import CourseSlider from "./CourseSlider";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const recentCourses = [
   {
@@ -73,8 +73,8 @@ const courses = [
     discount: "89% OFF",
   },
 ];
-
 const Homepage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -213,7 +213,10 @@ const Homepage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {/* ==== Live Courses ==== */}
-              <div className="relative bg-[#db2e84] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden">
+              <div
+                onClick={() => navigate("/live-course")}
+                className="relative bg-[#db2e84] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden"
+              >
                 {/* Background grid pattern effect */}
                 <div className="absolute inset-0 opacity-20 bg-[url('https://i.imgur.com/BoN9kdC.png')]"></div>
 
@@ -238,7 +241,10 @@ const Homepage = () => {
               </div>
 
               {/* ==== Test Series ==== */}
-              <div className="relative bg-[#1557ff] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden">
+              <div
+                onClick={() => navigate("/tests-series")}
+                className="relative bg-[#1557ff] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden"
+              >
                 <div className="absolute inset-0 opacity-20 bg-[url('https://i.imgur.com/BoN9kdC.png')]"></div>
 
                 <h3 className="text-xl font-semibold relative z-10">
@@ -262,7 +268,12 @@ const Homepage = () => {
               </div>
 
               {/* ==== Recorded Courses ==== */}
-              <div className="relative bg-[#20a55f] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden">
+              <div
+                onClick={() => {
+                  navigate("/recorde-course");
+                }}
+                className="relative bg-[#20a55f] text-white rounded-2xl p-6 h-40 flex flex-col justify-between cursor-pointer overflow-hidden"
+              >
                 <div className="absolute inset-0 opacity-20 bg-[url('https://i.imgur.com/BoN9kdC.png')]"></div>
 
                 <h3 className="text-xl font-semibold relative z-10">
