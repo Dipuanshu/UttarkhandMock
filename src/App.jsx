@@ -1,11 +1,17 @@
 /** @format */
 
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage";
-
-export default function App() {
+import CourseDetail from "./CourseDetail";
+function App() {
   return (
     <>
-      <Homepage />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="course/:id" element={<CourseDetail />} />
+      </Routes>
     </>
   );
 }
+export default App;

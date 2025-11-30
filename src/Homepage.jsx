@@ -3,6 +3,7 @@
 import CourseSlider from "./CourseSlider";
 import Header from "./Header";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const recentCourses = [
   {
@@ -195,9 +196,12 @@ const Homepage = () => {
                   </span>
                 </div>
 
-                <button className="mt-4 w-full bg-pink-600 text-white py-3 rounded-xl font-medium hover:bg-pink-700 transition">
+                <Link
+                  to={`/course/${i}`}
+                  className="mt-4 w-full bg-pink-600 text-white py-3 rounded-xl font-medium hover:bg-pink-700 transition text-center"
+                >
                   Get this course
-                </button>
+                </Link>
               </div>
             ))}
           </div>

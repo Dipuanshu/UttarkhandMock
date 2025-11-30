@@ -8,7 +8,7 @@ export default function Footer() {
         {/* FOOTER TOP ROW */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <p className="text-gray-300 text-sm">
-            © 2025 - Devbhoomi Career point
+            © 2025 - Dehradun Coaching Center
           </p>
 
           <div className="text-center md:text-right mt-4 md:mt-0">
