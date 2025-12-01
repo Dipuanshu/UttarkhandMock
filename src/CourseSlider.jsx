@@ -1,8 +1,10 @@
 /** @format */
 
 import React, { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CourseSlider = ({ title, data }) => {
+  const navigate = useNavigate();
   const sliderRef = useRef(null);
   const [active, setActive] = useState(0);
 
@@ -58,20 +60,19 @@ const CourseSlider = ({ title, data }) => {
         {/* SLIDER */}
         <div
           ref={sliderRef}
-          className="flex gap-6 overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth"
-          style={{
-            scrollBehavior: "smooth",
-            paddingBottom: "10px",
+          onClick={() => {
+            navigate(`/course/${0}`);
           }}
+          className="slider-container flex overflow-x-auto overflow-y-hidden scroll-smooth scrollbar-hide gap-6"
         >
           {data.map((item, i) => (
             <div
               key={i}
-              className="min-w-[350px] bg-white rounded-xl shadow border p-4 flex gap-4"
+              className="min-w-full bg-white rounded-xl shadow border p-4 flex gap-6"
             >
               <img
                 src={item.img}
-                className="w-32 h-32 rounded-lg object-cover"
+                className="w-48 h-48 rounded-lg object-cover"
                 alt=""
               />
 

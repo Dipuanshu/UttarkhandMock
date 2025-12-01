@@ -24,6 +24,12 @@ const recentCourses = [
     title: "UKPSC Samanya Gyan Full Course",
     price: 150,
   },
+  {
+    img: "https://courses-assets-v2.classplus.co/_next/image?url=/api/proxyimage?url=https%3A%2F%2Fali-cdn-wl-assets.classplus.co%2Fproduction%2Fsingle%2Fpuesw%2F5a7c7fc0-003f-436c-a61d-35bd1fe646bb.jpg&w=640&q=75",
+    tags: ["VIDEOS"],
+    title: "UKPSC Samanya Gyan Full Course",
+    price: 150,
+  },
 ];
 
 const featuredCourses = [
@@ -348,10 +354,12 @@ const Homepage = () => {
                     {course.discount}
                   </span>
                 </div>
-
-                <button className="mt-4 w-full bg-pink-600 text-white py-3 rounded-xl font-medium hover:bg-pink-700 transition">
+                <Link
+                  to={`/course/${0}`}
+                  className="mt-4 w-full bg-pink-600 text-white py-3 rounded-xl font-medium hover:bg-pink-700 transition text-center"
+                >
                   Get this course
-                </button>
+                </Link>
               </div>
             ))}
           </div>
