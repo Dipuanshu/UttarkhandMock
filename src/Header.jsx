@@ -1,15 +1,15 @@
 /** @format */
 
-// src/components/Header.jsx
 import { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      {/* NAVBAR */}
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         {/* Logo */}
         <div className="flex items-center space-x-2 cursor-pointer">
@@ -36,7 +36,6 @@ export default function Header() {
             Free Tests
           </a>
 
-          {/* Dropdown */}
           <div
             className="relative cursor-pointer"
             onClick={() => setOpenMenu(!openMenu)}
@@ -55,10 +54,21 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Login Button */}
-        <button className="px-6 py-2 bg-[#ff2e8e] text-white rounded-lg font-semibold hover:bg-pink-600">
-          Login
-        </button>
+        {/* 👉 FIX HERE: wrap both buttons together */}
+        <div className="flex items-center space-x-3">
+          <button
+            onClick={() => {
+              navigate("/admin-dashboard");
+            }}
+            className="px-6 py-2 bg-[#ff2e8e] text-white rounded-lg font-semibold hover:bg-pink-600"
+          >
+            Admin Dashboard
+          </button>
+
+          <button className="px-6 py-2 bg-[#ff2e8e] text-white rounded-lg font-semibold hover:bg-pink-600">
+            Login
+          </button>
+        </div>
       </div>
     </header>
   );

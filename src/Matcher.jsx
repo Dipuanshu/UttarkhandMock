@@ -1,4 +1,4 @@
 /** @format */
 
-export const HTTPURL = "http://localhost:5000/api/";
-export const FileOperURL = "http://localhost:5000";
+export const HTTPURL = "https://uttarkhandmock-backend.onrender.com/api/";
+export const FileOperURL = "https://uttarkhandmock-backend.onrender.com";
