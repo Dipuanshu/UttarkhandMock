@@ -1,8 +1,10 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CourseModal = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
   const [states, setStates] = useState([]);
   const [selectedState, setSelectedState] = useState("Uttarakhand"); // default
 
@@ -90,7 +92,7 @@ const CourseModal = ({ isOpen, onClose }) => {
 
   const handleVerifyOTP = () => {
     if (validate()) {
-      alert(`OTP sent to ${dialCode} ${mobile}`);
+      navigate("/notes");
     }
   };
 
